@@ -1,19 +1,16 @@
 package joker;
 import joker.Witzeliste;
 import joker.Ausgabe;
-public class joker {
 
-    public static void main(String[] args) {
+public class Joker {
 
-        
-        //public static void telljoke() {
-            String listjoke = getjoke();
+    private Ausgabe printWitz = new Ausgabe();
 
-            printjoke(listjoke);
+    private Witzeliste listjoke = new Witzeliste();
+ 
+    public void telljoke() {
+        String Witz = listjoke.getjoke();
 
-        //}
+        printWitz.printjoke(Witz);
     }
-
-        
-    
 }
