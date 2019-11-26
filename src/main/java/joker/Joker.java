@@ -1,16 +1,26 @@
 package joker;
-import joker.Witzeliste;
-import joker.Ausgabe;
+
+import java.util.Random;
 
 public class Joker {
 
-    private Ausgabe printWitz = new Ausgabe();
+    private Ausgabe printWitz = new Consolenausgabe();
+    private Ausgabe colorprintWitz = new Colorausgabe();
+    private Ausgabe guiprintWitz = new Guiausgabe();
 
     private Witzeliste listjoke = new Witzeliste();
  
     public void telljoke() {
-        String Witz = listjoke.getjoke();
+        String witz = listjoke.getjoke();
 
-        printWitz.printjoke(Witz);
+        Ausgabe[] ausgaben = {
+            printWitz,
+            colorprintWitz,
+            guiprintWitz
+        };
+        Random generator = new Random();
+        int index = generator.nextInt(ausgaben.length);
+
+        ausgaben[index].printjoke(witz);
     }
 }
