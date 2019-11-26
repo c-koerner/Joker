@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - joker",
+            "request": "launch",
+            "mainClass": "joker.joker"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Joker",
+            "request": "launch",
+            "mainClass": "joker.Joker"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Joker",
+            "request": "launch",
+            "mainClass": "Joker.Joker"
+        }
+    ]
+}
